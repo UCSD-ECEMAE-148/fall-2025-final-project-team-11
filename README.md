@@ -29,8 +29,9 @@ A two degree-of-freedom (DOF) gimbal mechanism accurately follows the selected t
 ## Demonstration (Video)
 
 
-Uploading videoplayback.mp4…
 
+
+https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 
 ## Mode Explanations
 - Scanning: Servo pans 180 degreees horizontally to look for targets. System locks onto an object for 3 seconds to identify it as a target, then creates a yellow hitbox around it.
