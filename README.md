@@ -51,6 +51,13 @@ https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 - Initial Car Assembly
 <img width="827" height="584" alt="EarlyQuarterSetup" src="https://github.com/user-attachments/assets/3c7b90da-147a-4233-a5c1-3a7fbd690cf8" />
 
+## Hardware Highlights
+
+| Part         | CAD Design |
+|-------------|-----------|
+| Adjustable Camera Holder |<img width="457" height="348" alt="Screenshot 2025-12-13 at 5 26 30 PM" src="https://github.com/user-attachments/assets/d3b36886-e9e4-403e-8ad1-2c1c5519ae87" />|
+| Mounts for Gimbal  | ![Base plate](https://github.com/user-attachments/assets/another-image-id) |
+
 ## Ignition Systems Schematic
 <img width="593" height="396" alt="Ignition system" src="https://github.com/user-attachments/assets/844c7042-6406-4b19-8649-8dae65aab2ba" />
 
