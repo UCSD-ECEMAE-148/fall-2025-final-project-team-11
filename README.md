@@ -35,12 +35,12 @@ https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 - A feature that was added to increase efficiency and effectiveness of our project was our Smart-Cam implementation. Smart-Cam enables our PID ontrolled gimbal to move the camera in response to a moving target. The speeds of the tracking can be adjusted within the Python scripts. Additionally, if the target is lost by the tracking system, Smart-Cam is able to calculate the trajectory that the target was following before it left the field of view of the camera. By recalling this information, it is able to make smart decisions such as automatically scanning for the object again in the direction of where the target has last left.
 
 ## Mode Explanations
-To find, track and ,, we designed 3 main operating modes:
-- Mode 1 [Scan]: The gimbal pans 180 degreees horizontally and 90° vertically to look for targets. If a potential target is found, the system will lock onto it for 3 seconds in order to avoid false detections. After a target is registered, the target will have a number ID, their stationary position is registered, and their hitbox will turn yellow.
+To find, track and we designed 3 main operating modes:
+- Mode 1 [Scan]: The gimbal pans 180 degrees horizontally and 90° vertically to look for targets. If a potential target is found, the system will lock onto it for 3 seconds in order to avoid false detections. After a target is registered, the target will have a number ID, their stationary position is registered, and their hitbox will turn yellow.
   
 - Mode 2 [Tracking]: Once a target is recognized and Tracking mode is activated, the algorithm is going to follow the selected target and update its saved position in space. User can manually choose which target to follow between the list of targets found. Whenever the target ID is entered by the operator, and the gimbal will instantly center to camera towards the last known position of the desired target. 
 
-- Mode 3 [Fire]: When the fire command is pressed and a target is selected, a 5 second countdown will begin on the top right corner. Once the countdown reaches 0, their hitbox turns red. This mode simulate the ignition system activated to fire our rocket at the desired target. In our case, if the detected area of the target after the fire sequence is less than what previously observed, the system would register the target as hit, and print "DEAD" on the preview screen.
+- Mode 3 [Fire]: When the fire command is pressed and a target is selected, a 5-second countdown will begin on the top right corner. Once the countdown reaches 0, their hitbox turns red. This mode simulates the ignition system activated to fire our rocket at the desired target. In our case, if the detected area of the target after the fire sequence is less than what was previously observed, the system would register the target as hit, and print "DEAD" on the preview screen.
 - 
 ## RoboFlow Model
 
