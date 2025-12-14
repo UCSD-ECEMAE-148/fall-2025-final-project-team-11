@@ -68,7 +68,6 @@ https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 
 ## Electric Diagram
 <img width="727" height="414" alt="electrical diagram" src="https://github.com/user-attachments/assets/838ac5c9-671a-4e54-a26b-feed91f9b829" />
-al 
 
 ## Early Quarter Achievements
 - Donkey Car Autonomous Laps:
