@@ -24,7 +24,6 @@ A two degree-of-freedom (DOF) gimbal mechanism with PID control allows for the a
 - LIDAR and/or OAK-D camera depth mechanisms to access objects as potential targets from far away 
 - Adding an autonomous driving feature to allow the ATS to access and be within accurate firing distance of objects out of range
 - Integration of prototyped ignition system for firing rocket engines
-- Integration of a user targeting system, where the user could choose the preferred target instead of a fixed target type. 
 
 ## Demonstration (Video)
 
@@ -33,15 +32,16 @@ A two degree-of-freedom (DOF) gimbal mechanism with PID control allows for the a
 
 https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 ## Smart-Cam Feature
-- A feature that was added to increase efficiency and effectiveness of our project was our Smart-Cam implementation. Smart-Cam enables our PID ontrolled gimbal to move the camera in response to a moving target. The speeds of the tracking can be adjusted within the Python scripts. Additionally, Smart-Cam is able to recall the direction a target was before it left the field of view of the camera. By recalling this information, it is able to make smart decisions such as automatically scanning for the object again in the direction of where the target has last left.
+- A feature that was added to increase efficiency and effectiveness of our project was our Smart-Cam implementation. Smart-Cam enables our PID ontrolled gimbal to move the camera in response to a moving target. The speeds of the tracking can be adjusted within the Python scripts. Additionally, if the target is lost by the tracking system, Smart-Cam is able to calculate the trajectory that the target was following before it left the field of view of the camera. By recalling this information, it is able to make smart decisions such as automatically scanning for the object again in the direction of where the target has last left.
 
 ## Mode Explanations
-- Mode 1 [Scan Surrounding]: Gimbal pans 180 degreees horizontally to look for targets. If a potential target is found, the system will take 3 seconds to the object as a target in order to avoid false detections. After a target is registered, the target will have a number ID, their stationary position is registered, and their hitbox will turn yellow.
+To find, track and ,, we designed 3 main operating modes:
+- Mode 1 [Scan]: The gimbal pans 180 degreees horizontally and 90° vertically to look for targets. If a potential target is found, the system will lock onto it for 3 seconds in order to avoid false detections. After a target is registered, the target will have a number ID, their stationary position is registered, and their hitbox will turn yellow.
   
-- Mode 2 [Choose Target]: Once a target is registered from mode 1, the user can manually lock on a target based on their remembered position. Their target ID can be pressed and the gimbal will instantly center to camera towards the desired target.
+- Mode 2 [Tracking]: Once a target is recognized and Tracking mode is activated, the algorithm is going to follow the selected target and update its saved position in space. User can manually choose which target to follow between the list of targets found. Whenever the target ID is entered by the operator, and the gimbal will instantly center to camera towards the last known position of the desired target. 
 
-- Mode 3 [Fire Rocket]: Before the fire command is used, a target should be chosen from mode 2. When the fire command is pressed, a 5 second countdown will begin on the top right corner. Once the countdown reaches 0, their hitbox turns red. This mode represents when our created ignition system would have activated to fire our rocket engine at the desired target.
-
+- Mode 3 [Fire]: When the fire command is pressed and a target is selected, a 5 second countdown will begin on the top right corner. Once the countdown reaches 0, their hitbox turns red. This mode simulate the ignition system activated to fire our rocket at the desired target. In our case, if the detected area of the target after the fire sequence is less than what previously observed, the system would register the target as hit, and print "DEAD" on the preview screen.
+- 
 ## RoboFlow Model
 
 <img width="2033" height="1293" alt="RoboFlow" src="https://github.com/user-attachments/assets/f46bbf14-6654-49d2-9df3-2f3dfc7ba864" />
@@ -76,6 +76,11 @@ https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 ## Electric Diagram
 <img width="727" height="414" alt="electrical diagram" src="https://github.com/user-attachments/assets/838ac5c9-671a-4e54-a26b-feed91f9b829" />
 
+
+## Early Quarter Achievements
+- Donkey Car Autonomous Laps:
+- Donkey Car GPS Laps: 
+
 ## Acknowledgements
 Special thanks to Professor Silberman, our (very overworked) TA's Aryan & Winston, and the countless peers who have offered us helpful inisght, motivation, and good company throughout the countless hours and late nights spent on our autonomous car.
 
@@ -86,3 +91,4 @@ Special thanks to Professor Silberman, our (very overworked) TA's Aryan & Winsto
 | David Quan | davidqquan@gmail.com |
 | Jose Umana | jaumana@ucsd.edu |
 | Matthew Hwang | matthew.hwang97@gmail.com |
+
