@@ -1,6 +1,5 @@
 # Autonomous Targeting System (ATS)
-## MAE 148 Final Project
-### Team 11 Fall 2025
+## MAE 148 Final Project - Team 11 Fall 2025
 <img width="1371" height="321" alt="JSOElogo" src="https://github.com/user-attachments/assets/406e5140-232f-4706-923a-b325d50a7a29" />
 
 ![IMG_7566](https://github.com/user-attachments/assets/3a2fe580-732b-4d61-b3eb-991e242663ce)
