@@ -11,7 +11,7 @@
 
 ![IMG_7566](https://github.com/user-attachments/assets/3a2fe580-732b-4d61-b3eb-991e242663ce)
 
-## Abstract
+## Purpose
 The goal of this project is to develop a targeting system using OpenCV that scans, labels, and locks onto targets of interest, then allows for manual selection of a target. 
 A two degree-of-freedom (DOF) gimbal mechanism with PID control allows for the accurate following of selected targets to keep them in frame at all times, constantly ready to fire a rocket engine.
 
