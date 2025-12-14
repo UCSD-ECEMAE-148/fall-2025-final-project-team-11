@@ -34,9 +34,11 @@ A two degree-of-freedom (DOF) gimbal mechanism accurately follows the selected t
 https://github.com/user-attachments/assets/16eb97ce-2f67-4ed8-98f5-33ec005cf2fc
 
 ## Mode Explanations
-- Mode 1 [Choose Target]: User input determines which target will be targeted (among many targets detected by camera from scanning mode).
-- Scanning: Servo pans 180 degreees horizontally to look for targets. System locks onto an object for 3 seconds to identify it as a target, then creates a yellow hitbox around it.
-- Fire: 5 second cooldown, target is locked, hitbox turns red. Theroetically, after 5 seconds the ignition system is activated and a rocket engine fires at target. 
+- Mode 1 [Scan Surrounding]: Gimbal pans 180 degreees horizontally to look for targets. If a potential target is found, the system will take 3 seconds to the object as a target in order to avoid false detections. After a target is registered, the target will have a number ID, their stationary position is registered, and their hitbox will turn yellow.
+  
+- Mode 2 [Choose Target]: Once a target is registered from mode 1, the user can manually lock on a target based on their remembered position. Their target ID can be pressed and the gimbal will instantly center to camera towards the desired target.
+
+- Mode 3 [Fire Rocket]: Before the fire command is used, a target should be chosen from mode 2. When the fire command is pressed, a 5 second countdown will begin on the top right corner. Once the countdown reaches 0, their hitbox turns red. This mode represents when our created ignition system would have activated to fire our rocket engine at the desired target.
 
 ## CAD Model Assemblies
 - Final Car Assembly
